@@ -1,0 +1,16 @@
+name = "moontv"
+compatibility_date = "2024-08-01"
+compatibility_flags = ["nodejs_compat"]
+
+# Cloudflare Pages 的构建输出目录（与你之前 README 的 .vercel/output/static 一致）
+pages_build_output_dir = ".vercel/output/static"
+
+# 可选：智能调度
+[placement]
+mode = "smart"
+
+# 如需 D1，在 Cloudflare Pages 绑定后再取消注释并填入真实 ID
+# [[d1_databases]]
+# binding = "DB"
+# database_name = "moontv"
+# database_id = "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
