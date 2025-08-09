@@ -5,7 +5,8 @@
   "scripts": {
     "convert:config": "node scripts/convert-config.js",
     "dev": "pnpm gen:runtime && pnpm gen:manifest && next dev -H 0.0.0.0",
-    "build": "pnpm gen:runtime && pnpm gen:manifest && npx @cloudflare/next-on-pages@1",
+    "build": "pnpm gen:runtime && pnpm gen:manifest && next build",
+    "vercel-build": "pnpm gen:runtime && pnpm gen:manifest && next build",
     "pages:build": "npx @cloudflare/next-on-pages@1",
     "start": "next start",
     "lint": "next lint",
@@ -91,5 +92,11 @@
       "prettier -w"
     ]
   },
+  "trustedDependencies": [
+    "esbuild",
+    "sharp",
+    "unrs-resolver",
+    "workerd"
+  ],
   "packageManager": "pnpm@10.14.0"
 }
