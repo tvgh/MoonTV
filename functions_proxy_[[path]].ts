@@ -2,6 +2,8 @@
 // 仅做通用资源代理，满足图片/静态资源代理与基础 CORS 需求。
 // 如需更复杂的 HTML 重写，可后续扩展（保持与 proxy.worker.js 的策略一致）。
 
+import { PagesFunction } from '@cloudflare/pages';
+
 function setNoCache(headers: Headers) {
   headers.set('Cache-Control', 'no-store, no-cache, must-revalidate, proxy-revalidate, max-age=0');
   headers.set('Pragma', 'no-cache');
